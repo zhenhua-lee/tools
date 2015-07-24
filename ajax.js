@@ -1,6 +1,6 @@
 var ajax = {
     createXHR: function () {
-        return new XMLHttpRequest()
+        return new XMLHttpRequest();
     },
     get: function (obj) {
         var xhr = this.createXHR();
@@ -24,6 +24,7 @@ var ajax = {
                 }
             }
 
-        }
+        };
     }
-}
+};
+module.exports = ajax;
