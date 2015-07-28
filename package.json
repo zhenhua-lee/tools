@@ -24,5 +24,10 @@
     "gulp-uglify": "^1.2.0",
     "mkdirp": "^0.5.1",
     "svg-sprite": "^1.2.6"
+  },
+  "dependencies": {
+    "del": "^1.2.0",
+    "superagent": "^1.2.0",
+    "supertest": "^1.0.1"
   }
 }

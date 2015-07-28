@@ -1,6 +1,6 @@
 # tools
 
-日常开发的一些想法
+##日常开发的一些想法
 
 ### http
 
@@ -19,3 +19,11 @@
 
 
 
+
+## 辅助工具
+
+- gulp：task runner
+
+- [superagent](http://visionmedia.github.io/superagent/): 请求的发送
+
+- [componentjs](https://github.com/componentjs/component): 进行样式管理
