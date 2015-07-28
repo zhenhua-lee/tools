@@ -1,0 +1,35 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5em 7.5em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+.icon.rank1:before {
+    background-position: 0em 0em;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.icon.rank2:before {
+    background-position: 0em -2.5em;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.icon.rank3:before {
+    background-position: 0em -5em;
+    width: 2.5em;
+    height: 2.5em;
+}
+

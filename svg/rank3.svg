@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="图层_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px"
+	 viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
+<title>Rectangle 60 + Rectangle 60 Copy 3</title>
+<desc>Created with Sketch.</desc>
+<g id="Rectangle-60-_x2B_-Rectangle-60-Copy-3_1_">
+	<path id="Rectangle-60-Copy-3_1_" sketch:type="MSShapeGroup" fill="#A19DC1" d="M3.367,8.717l-3.078,3.078
+		c-0.387,0.387-0.391,1.02,0,1.409l3.078,3.078v4.354c0,0.544,0.443,0.995,0.994,0.995h4.354l3.079,3.08
+		c0.387,0.385,1.02,0.389,1.409,0l3.078-3.08h4.354c0.546,0,0.995-0.443,0.995-0.995v-4.354l3.08-3.078
+		c0.387-0.386,0.391-1.021,0-1.409l-3.08-3.079V4.362c0-0.543-0.441-0.995-0.995-0.995h-4.354l-3.078-3.078
+		c-0.388-0.385-1.021-0.389-1.409,0L8.716,3.367H4.361c-0.545,0-0.994,0.445-0.994,0.995V8.717z"/>
+</g>
+<g enable-background="new    ">
+	<path fill="#F5F5F5" d="M8.316,14.004h2.733c-0.036,0.475,0.092,0.839,0.384,1.094c0.219,0.256,0.563,0.383,1.039,0.383
+		c0.766-0.035,1.202-0.418,1.312-1.147c0-0.802-0.62-1.166-1.859-1.094v-1.75c1.13,0.072,1.714-0.256,1.75-0.984
+		c-0.036-0.547-0.42-0.838-1.147-0.875c-0.803,0.037-1.222,0.383-1.258,1.039H8.646c0.108-2.041,1.438-3.117,3.991-3.228
+		c2.369,0.109,3.627,1.021,3.773,2.734c0,0.984-0.383,1.641-1.148,1.969c0.911,0.401,1.385,1.095,1.422,2.078
+		c-0.072,2.151-1.531,3.264-4.375,3.336C9.646,17.484,8.316,16.301,8.316,14.004z"/>
+</g>
+</svg>
