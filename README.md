@@ -4,17 +4,21 @@
 
 ### http
 
-- ajax.js: 简单地实现异步请求
+- ajax.js(custom): 简单地实现异步请求
 
 
 ### mock
 
-- mock.js: 在实际开发中对http方法进行覆盖，实现前后端分离开发
+- mock.js(custom): 在实际开发中对http方法进行覆盖，实现前后端分离开发
+
+- [superagent-mocker](https://github.com/rambler-digital-solutions/superagent-mocker): 对superagent进行数据的mock
+
+- [mockjs](http://mockjs.com/): 数据模拟系统
 
 
 ### svg
 
-- svg2sprite.js: 将svg合成sprite的过程
+- svg2sprite.js(custom): 将svg合成sprite的过程
 
 
 
@@ -27,3 +31,7 @@
 - [superagent](http://visionmedia.github.io/superagent/): 请求的发送
 
 - [componentjs](https://github.com/componentjs/component): 进行样式管理
+
+- [browserify/watchify](https://github.com/substack/node-browserify): module打包工具
+
+

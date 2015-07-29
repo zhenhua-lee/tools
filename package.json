@@ -4,7 +4,8 @@
   "description": "somethings about my thinking",
   "main": "ajax.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "watchify ./mock/superagent_mock.js -o dist/superagent_mock-bundle.js"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,15 @@
     "gulp-svg-sprites": "^3.0.0",
     "gulp-uglify": "^1.2.0",
     "mkdirp": "^0.5.1",
+    "superagent-mocker": "^0.1.6",
     "svg-sprite": "^1.2.6"
   },
   "dependencies": {
+    "browserify": "^11.0.0",
     "del": "^1.2.0",
+    "mockjs": "^0.1.10",
     "superagent": "^1.2.0",
-    "supertest": "^1.0.1"
+    "supertest": "^1.0.1",
+    "watchify": "^3.3.0"
   }
 }

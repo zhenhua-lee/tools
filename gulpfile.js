@@ -5,7 +5,7 @@ var del = require('del');
 gulp.task('sprites', function () {
     return gulp.src('./svg/*.svg')
         .pipe(svgSprite({
-            mode: 'defs'
+            mode: 'symbols'
         }))
         .pipe(gulp.dest('./dist/svg'));
 });
