@@ -4,7 +4,7 @@
   "description": "somethings about my thinking",
   "main": "ajax.js",
   "scripts": {
-    "test": "echo today is goog && exit 1",
+    "test": "echo today is goog",
     "bundle": "watchify ./mock/superagent_mock.js -o dist/superagent_mock-bundle.js"
   },
   "repository": {
