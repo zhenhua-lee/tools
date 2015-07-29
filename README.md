@@ -34,4 +34,5 @@
 
 - [browserify/watchify](https://github.com/substack/node-browserify): module打包工具
 
+- [travis-ci](https://travis-ci.org/): 用于项目的CI
 
