@@ -1,4 +1,4 @@
-# tools
+# tools[![Build Status](https://travis-ci.org/zhenhua-lee/tools.svg?branch=master)](https://travis-ci.org/zhenhua-lee/tools)
 
 ##日常开发的一些想法
 
