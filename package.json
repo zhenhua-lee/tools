@@ -5,7 +5,7 @@
   "main": "ajax.js",
   "scripts": {
     "test": "echo today is goog",
-    "bundle": "watchify ./mock/superagent_mock.js -o dist/superagent_mock-bundle.js"
+    "bundle": "watchify -t [envify NODE_ENV development] ./mock/superagent_mock.js -o dist/superagent_mock-bundle.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/zhenhua-lee/tools#readme",
   "devDependencies": {
+    "envify": "^3.4.0",
     "eslint": "^0.24.1",
     "eslint-plugin-react": "^3.0.0",
     "gulp": "^3.9.0",
@@ -25,7 +26,8 @@
     "gulp-uglify": "^1.2.0",
     "mkdirp": "^0.5.1",
     "superagent-mocker": "^0.1.6",
-    "svg-sprite": "^1.2.6"
+    "svg-sprite": "^1.2.6",
+    "uglify-js": "^2.4.24"
   },
   "dependencies": {
     "browserify": "^11.0.0",

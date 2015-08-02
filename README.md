@@ -23,7 +23,7 @@
 
 ## 辅助工具
 
-- gulp：task runner
+- [gulp](https://github.com/gulpjs/gulp/tree/master/docs)：task runner
 
 - [superagent](http://visionmedia.github.io/superagent/): 请求的发送
 
@@ -32,4 +32,10 @@
 - [browserify/watchify](https://github.com/substack/node-browserify): module打包工具
 
 - [travis-ci](https://travis-ci.org/): 用于项目的CI
+
+- [envify](https://www.npmjs.com/package/envify): 用于区分development、production环境，这个工具很好用，例如将mock代码放到if (process.env.NODE_ENV="developement")中，上线的时候通过uglify2就可以把mock代码部分去掉
+
+- [UglifyJS2](https://github.com/mishoo/UglifyJS2): 用于代码的压缩、精简
+
+- [hightlight.js](https://github.com/isagalaev/highlight.js): 用于实现代码的高亮
 
