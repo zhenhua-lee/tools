@@ -11,6 +11,14 @@ var driver = new webdriver.Builder()
     .setFirefoxOptions(/* ... */)
     .build();
 
+driver.manage()
+.timeouts()
+.implicitlyWait(10000);
+
+driver.manage()
+.timeouts()
+.pageLoadTimeout(5000);
+
 driver.get('http://bj.meituan.com/');
 driver.findElement(By.name('w')).sendKeys('美食')
 driver.findElement(By.css('.s-submit')).click();
