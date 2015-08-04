@@ -39,3 +39,5 @@
 
 - [hightlight.js](https://github.com/isagalaev/highlight.js): 用于实现代码的高亮
 
+- [karma](http://karma-runner.github.io/0.13/index.html): test runner，对测试过程进行管理
+
