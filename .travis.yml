@@ -1,9 +1,10 @@
 language: node_js
 node_js:
-    - '0.10'
+  - '0.10'
 notifications:
-    emial:
-        recipients:
-            -lizhenhua230@gmail.com
-        on_success: always
-        on_failure: always
+  email:
+    recipients:
+      - lizhenhua230@gmail.com
+      - lizhenhua02@meituan.com
+    on_success: always
+    on_failure: always
