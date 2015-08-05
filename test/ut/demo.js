@@ -1,7 +1,7 @@
-var expect = chai.expect;
+// var expect = chai.expect;
 
-// var expect = require('chai').expect;
-// var add = require('../../src/demo')
+var expect = require('chai').expect;
+var add = require('../../src/demo')
 describe('add', function () {
     it('count 1 + 2', function () {
         expect(add(1, 2)).to.equal(3)
