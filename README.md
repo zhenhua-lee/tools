@@ -20,6 +20,10 @@
 
 - svg2sprite.js(custom): 将svg合成sprite的过程
 
+### thinking
+
+- 记录个人的一些想法，例如require的实现
+
 
 ## 辅助工具
 
