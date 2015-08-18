@@ -1,18 +1,18 @@
 // 模拟browserify的模块打包机制
 var require = (function () {
-    var newRequire(id) {
-        if (!cache[id]) {
+    var newRequire(key) {
+        if (!cache[key]) {
             function innerRequire (path) {
-                var id = modules[id][1][path];
-                return newRequire(id);
+                var key = modules[key][1][path];
+                return newRequire(key);
             }
             var m = cache[name] = {exports: {}};
-            modules[id][0].call(m.exports, innerRequire, m, m.exports)
+            modules[key][0].call(m.exports, innerRequire, m, m.exports)
         }
-        return cache[id].exports;
+        return cache[key].exports;
     }
-    entry.forEach(function (id) {
-        newRequire(id);
+    entry.forEach(function (key) {
+        newRequire(key);
     })
 
     // 在外部可以使用require(path)
@@ -36,6 +36,12 @@ var modules = {
         },
         {
             // dependecies
+        }
+    },
+    key: {
+        fn,
+        {
+            // 依赖
         }
     }
 }
