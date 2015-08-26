@@ -3,3 +3,4 @@ bower_components/
 out/**/*
 dist/**/*
 npm-debug.log
+exp

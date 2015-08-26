@@ -24,6 +24,10 @@
 
 - 记录个人的一些想法，例如require的实现
 
+### lib
+
+- 外部依赖的第三方库
+
 
 ## 辅助工具
 
@@ -44,4 +48,6 @@
 - [hightlight.js](https://github.com/isagalaev/highlight.js): 用于实现代码的高亮
 
 - [karma](http://karma-runner.github.io/0.13/index.html): test runner，对测试过程进行管理
+
+- [nodemon](http://nodemon.io/): 在node开发时，当文件发生改变时，可以自动监控文件的变化，无需重新启动，nodemon.json是先关的配置文件.
 

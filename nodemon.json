@@ -1,0 +1,7 @@
+{
+    "verbose": true,
+    "watch": [
+        "./base.js"
+    ],
+    "ext": "js json"
+}
