@@ -1,5 +1,5 @@
 // 模拟browserify的模块打包机制
-var require = (function () {
+var require = (function (modules, cache, entry) {
     var newRequire(key) {
         if (!cache[key]) {
             function innerRequire (path) {
