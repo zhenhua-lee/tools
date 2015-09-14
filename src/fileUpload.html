@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload</title>
+</head>
+<body>
+    <input type="file" id="J-file" style="display: none;" />
+    <button id="J-btn"> click me</button>
+    <img src="" id="J-img" />
+</body>
+</html>
+
+<script>
+/* 文件的上传处理 */
+document.querySelector('#J-btn').addEventListener('click', function (e) {
+    console.log('ssdfdsfs');
+    document.querySelector('#J-file').click();
+    e.preventDefault();
+}, false)
+
+/* 使用FileReader读取本地文件 */
+// document.querySelector('#J-file').addEventListener('change', function (e) {
+//     var file = e.target.files[0];
+//     var reader = new FileReader();
+//     reader.readAsDataURL(file);
+//     reader.onload = function (e) {
+//         document.querySelector('#J-img').src = e.target.result;
+//     }
+// }, false)
+
+/* 使用window.URL.createObjectURL获取文件URL */
+document.querySelector('#J-file').addEventListener('change', function (e) {
+    var file = e.target.files[0];
+    var url = window.URL.createObjectURL(file);
+    document.querySelector('#J-img').src = url;
+}, false)
+
+</script>
