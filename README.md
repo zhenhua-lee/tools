@@ -29,6 +29,11 @@
 - 外部依赖的第三方库
 
 
+### algorithm
+
+- 经常学习一个算法，不做码农
+
+
 ## 辅助工具
 
 - [gulp](https://github.com/gulpjs/gulp/tree/master/docs)：task runner
