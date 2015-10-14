@@ -1,6 +1,7 @@
 /*
  * 斐波那契数列的计算
  * http://www.cnblogs.com/xwdreamer/archive/2012/05/15/2501606.html
+ * 三种算法：1.递归 2.数组缓存过程，避免重复计算 3.对2进行优化，降低空间复杂度
  */
 function fibo1(n) {
   return n > 1 ? fibo1(n-1) + fibo1(n-2) : 1;
@@ -32,3 +33,8 @@ module.exports = {
   arr: fibo2,
   before: fibo3,
 };
+
+/*
+ * 算法延伸推广
+ * 1. 青蛙跳台阶问题：一次可以跳1阶，也可以跳2阶，f(n)有多少种跳法
+ */
