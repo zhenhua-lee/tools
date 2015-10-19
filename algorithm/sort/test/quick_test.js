@@ -8,6 +8,8 @@ var assign = require('object-assign');
 var quickSort = require('../quick.js');
 var selectSort = require('../select.js');
 var bubbleSort = require('../bubble.js');
+var insertSort = require('../insert.js');
+var shellSort = require('../shell.js');
 
 test('quick sort', (t) => {
   var arr = [10, 2, 3, 5, 1, 32, 0, -23];
@@ -45,6 +47,32 @@ test('bubble sort', (t) => {
 
   t.deepEqual(bubbleSort([1]), [1]);
   t.deepEqual(bubbleSort([-1]), [-1]);
+  t.end();
+});
+
+test('insert sort', (t) => {
+  var arr = [10, 2, 3, 5, 1, 32, 0, -23];
+  var expectArr = assign([], arr);
+  expectArr.sort(function (m, n) {
+    return m > n;
+  });
+  t.deepEqual(insertSort(arr), expectArr);
+
+  t.deepEqual(insertSort([1]), [1]);
+  t.deepEqual(insertSort([-1]), [-1]);
+  t.end();
+});
+
+test('shell sort', (t) => {
+  var arr = [10, 2, 3, 5, 1, 32, 0, -23];
+  var expectArr = assign([], arr);
+  expectArr.sort(function (m, n) {
+    return m > n;
+  });
+  t.deepEqual(shellSort(arr), expectArr);
+
+  t.deepEqual(shellSort([1]), [1]);
+  t.deepEqual(shellSort([-1]), [-1]);
   t.end();
 });
 
