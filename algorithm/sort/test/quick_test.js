@@ -10,6 +10,7 @@ var selectSort = require('../select.js');
 var bubbleSort = require('../bubble.js');
 var insertSort = require('../insert.js');
 var shellSort = require('../shell.js');
+var mergeSort = require('../merge.js');
 
 test('quick sort', (t) => {
   var arr = [10, 2, 3, 5, 1, 32, 0, -23];
@@ -76,3 +77,16 @@ test('shell sort', (t) => {
   t.end();
 });
 
+test('merge sort', (t) => {
+  var arr = [10, 2, 3, 5, 1, 32, 0, -23];
+  var expectArr = assign([], arr);
+  expectArr.sort(function (m, n) {
+    return m > n;
+  });
+  t.deepEqual(mergeSort.iterate(arr), expectArr);
+  t.deepEqual(mergeSort.recursion(arr), expectArr);
+
+  t.deepEqual(shellSort([1]), [1]);
+  t.deepEqual(shellSort([-1]), [-1]);
+  t.end();
+});
