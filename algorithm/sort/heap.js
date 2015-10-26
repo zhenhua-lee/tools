@@ -3,6 +3,8 @@
  * 结果为从小到大，应该构建大顶堆；结果为从大到小，应该构建小顶堆
  * 时间复杂度为o(nlogn)
  * 稳定性：不稳定
+ * https://zh.wikipedia.org/wiki/%E5%A0%86%E6%8E%92%E5%BA%8F
+ * http://blog.csdn.net/hkx1n/article/details/3922249
  */
 
 function heapSort(arr) {
