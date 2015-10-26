@@ -3,11 +3,12 @@
  * 然后在小数组内使用插入排序，然后逐渐减小步长，知道步长为1，按成排序
  * 时间复杂度：O(n^1.2)
  * 空间复杂度：O(1)
+ * 稳定型：不稳定的
  * https://zh.wikipedia.org/wiki/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F
  */
 function shellSort(arr) {
   var len = arr.length;
-  for(var gap=len >>1; gap>0; gap >>=1) {
+  for(var gap=len >> 1; gap>0; gap >>=1) {
     for(var i=gap; i<len; i++) {
       var temp = arr[i];
       for(var j=i-gap; j>=0&&(arr[j] > temp); j -= gap) {
