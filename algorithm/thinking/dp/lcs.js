@@ -39,7 +39,22 @@ function lcs2 (arr1, arr2) {
       }
     }
   }
-  return tables[len1][len2];
+
+  var re = [0, 0, 0, 0, 0, 0, 0];
+  var m = len1, n=len2;
+  while(m && n) {
+    if (tables[m][n] === tables[m-1][n-1] + 1) {
+      re[m-1] = 1;
+      m--;
+      n--;
+    } else if (tables[m][n] === tables[m][n-1]) {
+      n--;
+    } else if(tables[m][n] === tables[m-1][n]) {
+      re[m-1] = 0;
+      m--;
+    }
+  }
+  return {tables: tables, re: re};
 }
 
 module.exports = {

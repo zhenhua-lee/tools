@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8" />
+    <title>loading gif</title>
+<style>
+body {
+    width: 800px;
+    margin: 100px auto;
+}
+.loading {
+    width: 50px;
+    height: 60px;
+    text-align: center;
+}
+.loading > div {
+    display: inline-block;
+    width: 6px;
+    height: 100%;
+    background-color: green;
+    animation-name: my;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes my {
+    0%, 40%, 100% {transform: scaleY(0.4);}
+    20% {transform: scaleY(1.0);}
+}
+.loading .rec1 {
+    animation-delay: 0.1s;
+}
+.loading .rec2 {
+    animation-delay: 0.3s;
+}
+.loading .rec3 {
+    animation-delay: 0.5s;
+}
+.loading .rec4 {
+    animation-delay: 0.7s;
+}
+.loading .rec5 {
+    animation-delay: 0.9s;
+}
+</style>
+</head>
+<body>
+    <p>
+        中间需要有停顿，也就是40%~100%这段时间样式保持不变
+    </p>
+    <div class="loading">
+        <div class="rec1"></div>
+        <div class="rec2"></div>
+        <div class="rec3"></div>
+        <div class="rec4"></div>
+        <div class="rec5"></div>
+    </div>
+</body>
+</html>
