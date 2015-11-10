@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>circle</title>
+<style type="text/css">
+  .shine {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+  }
+  .circle1, .circle2 {
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.6;
+
+    animation-name: dy;
+    animation-duration: 2.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .circle2 {
+    animation-delay: -1.0s;
+  }
+  @keyframes dy{
+    0%, 100% { transform: scale(0.0);}
+    50% { transform: scale(1.0);}
+  }
+
+</style>
+</head>
+<body>
+    <div class="shine">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+    </div>
+</body>
+</html>

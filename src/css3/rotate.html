@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>rotate</title>
+<style type="text/css">
+    .shine {
+        width: 60px;
+        height: 60px;
+        background-color: green;
+        margin: 0 auto;
+
+        animation-name: rot;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes rot{
+        0% { transform: perspective(120px)}
+        50% { transform: perspective(120px) rotateY(180deg)}
+        100% { transform: perspective(120px) rotateY(180deg) rotateX(180deg)}
+    }
+</style>
+</head>
+<body>
+    <p>rotate</p>
+    <div class="shine"></div>
+</body>
+</html>
