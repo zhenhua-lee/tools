@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>move</title>
+<style type="text/css">
+    .move {
+        position: relative;
+        width: 800px;
+        margin: 100px auto;
+    }
+    .move1, .move2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+        background-color: green;
+
+        animation-name: move;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .move2 {
+        animation-delay: -1s;
+    }
+    @keyframes move {
+        0% {top: 0; left: 0; transform: scale(1.0);}
+        25% {top: 0; left: 42px; transform: scale(0.4);}
+        50% {top: 42px; left: 42px; transform: scale(1.0);}
+        75% {top: 42px; left: 0; transform: scale(0.4);}
+        100% {top: 0; left: 0; transform: scale(1.0), rotate(360deg);}
+    }
+</style>
+</head>
+<body>
+    <div class="move">
+        <div class="move1"></div>
+        <div class="move2"></div>
+    </div>
+</body>
+</html>
