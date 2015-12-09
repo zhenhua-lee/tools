@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <p>iframe高度自适应:<span>父页面与iframe页面之间的通信</span></p>
+    <p>使用postMessage进行通信</p>
+
+    <iframe src="http://127.0.0.1:8080/iframe/iframe.html" id="my" frameborder="0" scrolling="no"></iframe>
+</body>
+<script type="text/javascript">
+    // 因为跨域问题，将父页面的url传递给iframe
+    function sendUrlToIframe() {
+        var iframe = document.querySelector('#my');
+        iframe.src = iframe.src + '#' + window.location.href;
+    }
+    // 设置iframe的高度
+    function setIframeEle() {
+        var h = window.location.hash.split('=')[1];
+        document.querySelector('#my').height = h;
+    }
+    // sendUrlToIframe();
+    // setIframeEle();
+    window.addEventListener('message', function (e) {
+        console.log('parent: ', e.data);
+        document.querySelector('#my').height = e.data;
+    })
+</script>
+</html>

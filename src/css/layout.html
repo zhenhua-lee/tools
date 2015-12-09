@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>layout</title>
+<style type="text/css">
+    .con:after {
+        display: block;
+        clear: both;
+        visibility: none;
+        height:0;
+        content: '';
+    }
+    .left-con {
+        float: left;
+        width: 100%;
+        background-color: green;
+    }
+    .left {
+        margin-right: 300px;
+    }
+    .right {
+        float: left;
+        width: 300px;
+        margin-left: -300px;
+        background-color: yellow;
+    }
+</style>
+</head>
+<body>
+<div class="con">
+    <div class="left-con">
+        <div class="left">left</div>
+    </div>
+    <div class="right">right</div>
+</div>
+</body>
+</html>

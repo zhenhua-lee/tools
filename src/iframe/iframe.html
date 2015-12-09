@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe</title>
+</head>
+<body style="border: 1px solid #ccc;">
+    <p style="width: 600px; height: 600px;">iframe page</p>
+</body>
+</html>
+<script type="text/javascript">
+    // 将iframe的高度信息放置到父页面的hash中
+    function sendHeightToParent() {
+        var uu = window.location.hash.split('#')[1];
+        uu += '#height=' + window.document.body.scrollHeight;
+        window.top.location = uu;
+    }
+    // sendHeightToParent();
+
+    function postMsg() {
+        var h = window.document.body.scrollHeight;
+        window.parent.postMessage(h, '*');
+        console.log('iframe has send message');
+    }
+    postMsg();
+</script>
