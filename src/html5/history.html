@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>history</title>
+</head>
+<body>
+  <h2>base use of history</h2>
+  <h2>simulate react-router</h2>
+  <div>
+    <input id="first" type="button" value="first" data-path="/hello" />
+    <input id="second" type="button" value="second" data-path="/world" />
+  </div>
+  <div id="aa"></div>
+</body>
+</html>
+<script type="text/javascript">
+  // var ele1 = document.querySelector('#first'),
+  //   ele2 = document.querySelector('#second');
+
+  //   var ctx = document.querySelector('#aa');
+
+  // document.body.addEventListener('click', function (e) {
+  //   ctx.textContent = 'i am first, oh haha';
+  //   window.history.pushState({age: 1}, 'hello fist', '/first');
+  // }, false);
+
+  // ele2.addEventListener('click', function (e) {
+  //   ctx.textContent = 'second!!!';
+  //   window.history.pushState({age: 2}, 'hello second', '/second');
+  // }, false);
+
+  // window.addEventListener('popstate', function(e) {
+  //   console.log(e.state)
+  // }, false);
+  // console.log('history.state: ', history.state);
+
+  var ctx = document.querySelector('#aa');
+
+  var router = [
+    {url: '/', text: 'index'},
+    {url: '/hello', text: 'hello'},
+    {url: '/world', text: 'world'},
+  ];
+
+  function matchRouter(pathname) {
+    var flag = false;
+    router.forEach(function (item) {
+      if (pathname === item.url) {
+        flag = true;
+        ctx.innerHTML = item.text;
+        window.history.pushState(item, null, item.url)
+      }
+    });
+    if (!flag) {
+      ctx.innerHTML = 'none';
+    }
+  }
+
+  document.body.addEventListener('click', function(e) {
+    if (e.target.type === 'button') {
+      var path = e.target.getAttribute('data-path');
+      matchRouter(path);
+    }
+  });
+  matchRouter(window.location.pathname)
+  window.addEventListener('popstate', function (e) {
+    var route = e.state;
+    ctx.innerHTML = route.text;
+  })
+</script>
+
