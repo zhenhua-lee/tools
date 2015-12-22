@@ -25,7 +25,7 @@ function method2(arr, sum) {
 
   while(sortArr[0] !== undefined) {
     var num1 = sortArr.shift();
-    var findByhalf = require('../find/findByhalf');
+    var findByhalf = require('../find/findByHalf');
     if (findByhalf(sortArr, sum-num1) !== null) {
       return {num1: num1, num2: sum - num1};
     }
