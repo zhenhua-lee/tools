@@ -1,5 +1,5 @@
 var test = require('tape');
-var findByHalf = require('./findByHalf');
+var findByHalf = require('../findByHalf');
 
 test('find by half', function(t) {
   var arr = [1, 10, 23, 102, 434, 478, 546, 654, 1204, 3456, 6452];
