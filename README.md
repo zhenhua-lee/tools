@@ -1,38 +1,13 @@
 # tools[![Build Status](https://travis-ci.org/zhenhua-lee/tools.svg?branch=master)](https://travis-ci.org/zhenhua-lee/tools)
 
-##日常开发的一些想法
+## 日常开发的想法及尝试
 
-### http
-
-- ajax.js(custom): 简单地实现异步请求
-
-
-### mock
-
-- mock.js(custom): 在实际开发中对http方法进行覆盖，实现前后端分离开发
-
-- [superagent-mocker](https://github.com/rambler-digital-solutions/superagent-mocker): 对superagent进行数据的mock
-
-- [mockjs](http://mockjs.com/): 数据模拟系统
-
-
-### svg
-
-- svg2sprite.js(custom): 将svg合成sprite的过程
-
-### thinking
-
-- 记录个人的一些想法，例如require的实现
-
-### lib
-
-- 外部依赖的第三方库
-
-
-### algorithm
-
-- 经常学习一个算法，不做码农
-
+- algorithm: 编写算法，不做码农
+- demo: 一些技术点的工具
+- http: HTTP协议、请求有关的内容
+- mock: 数据mock
+- unit-test: 单元测试
+- thinking: 技术点的思路、想法
 
 ## 辅助工具
 
