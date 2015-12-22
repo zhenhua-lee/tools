@@ -20,12 +20,12 @@ function method1(arr, sum) {
 // 可以先排序，然后再折半查找
 // 时间复杂度为o(nlog2n)
 function method2(arr, sum) {
-  var quick = require('./sort/quick');
+  var quick = require('../sort/quick');
   var sortArr = quick(arr);
 
   while(sortArr[0] !== undefined) {
     var num1 = sortArr.shift();
-    var findByhalf = require('./find/findByhalf');
+    var findByhalf = require('../find/findByhalf');
     if (findByhalf(sortArr, sum-num1) !== null) {
       return {num1: num1, num2: sum - num1};
     }
@@ -52,7 +52,7 @@ function findByHash(arr, sum) {
 
 // 在确定存在这两个数的前提下，可以先排序，然后使用左右指针进行判断
 function findBy2Index(arr, sum) {
-  var quick = require('./sort/quick');
+  var quick = require('../sort/quick');
   var sortArr = quick(arr);
   var i=0, j=sortArr.length-1;
   while(i<j) {

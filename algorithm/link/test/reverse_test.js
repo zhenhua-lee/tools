@@ -1,6 +1,6 @@
 var test = require('tape');
-var buildLink = require('./build.js');
-var reverse = require('./reverse.js');
+var buildLink = require('../build.js');
+var reverse = require('../reverse.js');
 
 test('reverse link', function(t) {
   var head = buildLink();

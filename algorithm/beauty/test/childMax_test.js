@@ -21,6 +21,6 @@ test('max method2', function (t) {
   t.equal(mx.method2(arr), 8);
   t.equal(mx.method2(arr2), 9);
   t.equal(mx.method2(arr3), 15);
-  t.equal(mx.method2(arr4), -1);
+  t.equal(mx.method2(arr4), -2);
   t.end();
 })

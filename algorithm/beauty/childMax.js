@@ -40,12 +40,13 @@ function fetchMaxByDp(arr) {
     k--;
   }
 
-  return {
-    max: max,
-    start: start,
-    begin: begin,
-    end: end
-  };
+  // return {
+  //   max: max,
+  //   start: start,
+  //   begin: begin,
+  //   end: end
+  // };
+  return max[max.length - 1];
 }
 
 module.exports = {

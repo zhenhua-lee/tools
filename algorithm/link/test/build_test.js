@@ -1,5 +1,5 @@
 var test = require('tape');
-var buildLink = require('./build.js');
+var buildLink = require('../build.js');
 
 test('build link', function(t) {
   var head = buildLink();
