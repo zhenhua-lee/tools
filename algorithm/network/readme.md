@@ -4,3 +4,4 @@
 - num2chinese.js: 将四位数以内的整数转换成汉子
 - allArrage.js: 全排列问题
 - printFile.js: 按照目录结构打印内容
+- stepUpStairs.js: 走楼梯问题
