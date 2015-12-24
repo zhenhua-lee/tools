@@ -1,6 +1,8 @@
 /*
  * 走迷宫问题
  * 方法1：以是否访问过该点为基准，访问过就标示，下次不能再访问，但是当发现访问了该点，就不能再走了，那么就需要回退
+ * http://www.cnblogs.com/youxin/p/3354661.html
+ * http://blog.csdn.net/tianshuai1111/article/details/8093925
  */
 function maze(path, x, y, m, n) {
   if (path[x][y] === 0) {
@@ -71,7 +73,6 @@ function getPath(path, x, y, m, n) {
   if (y+1<lenY && path[x][y+1] === 1) {
     getPath(path, x, y+1, m, n);
   }
-
 }
 getPath(path2, 0, 0, 3, 3)
 console.log(result)
