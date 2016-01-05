@@ -5,3 +5,4 @@
 - allArrage.js: 全排列问题
 - printFile.js: 按照目录结构打印内容
 - stepUpStairs.js: 走楼梯问题
+- arrayReverse.js: 数组旋转问题
