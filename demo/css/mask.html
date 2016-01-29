@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mask</title>
+  <style>
+    body {
+      width: 100%;
+      height: 600px;
+    }
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      background-color: #000;
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+    }
+    .mask-dialog {
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 600px;
+      height: 300px;
+      margin: 60px auto;
+      margin-left: -300px;
+      margin-top: -150px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      z-index: 110;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <p>页面遮罩层的实现</p>
+  <ul>
+    <li>实现遮罩层</li>
+    <li>实现水平垂直居中，但是需要提前知道父元素的尺寸</li>
+  </ul>
+  <div class="mask"></div>
+  <div class="mask-dialog">
+    <p>hello</p>
+  </div>
+</body>
+</html>
