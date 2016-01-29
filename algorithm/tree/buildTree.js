@@ -1,3 +1,7 @@
+/*
+ * @by zhenhua-lee
+ * 树的构建
+ */
 function buildTree(arr, index) {
   if (!arr || !arr.length || arr.length < index) return;
   var tree = {};

@@ -1,3 +1,6 @@
+/*
+ * 将队列当做栈使用
+ */
 function trans() {
   var arr = [];
   return {

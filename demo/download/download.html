@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>download</title>
+</head>
+<body>
+  <p>直接放到a中</p>
+  <a href="./a.jpg">download jpg</a>
+  <hr />
+
+  <p>直接下载zip文件</p>
+  <a href="./a.jpg.zip">直接下载zip文件</a>
+  <hr />
+
+  <p>添加download属性，直接下载图片信息</p>
+  <a href="./a.jpg" download="./hello.js" >download image with download</a>
+  <hr />
+
+  <p>通过js来下载文件: 存在两种方法: 链接 + </p>
+  <input type="file" id="myFile" />
+  <input type="button" value="js下载文件" id="J-js" />
+  <hr />
+
+  <p>通过iframe来下载文件</p>
+  <input type="button" value="js下载文件" id="J-iframe" />
+  <hr />
+
+</body>
+</html>
+<script>
+  // 通过download下载文件
+  // method1
+  var ele = document.getElementById('J-js');
+  // ele.addEventListener('click', function () {
+  //   var aLink = document.createElement('a');
+  //   var evt = document.createEvent('HTMLEvents');
+
+  //   evt.initEvent('click');
+  //   aLink.download = '111.html'
+  //   aLink.href = './a.jpg';
+
+  //   aLink.dispatchEvent(evt);
+  // }, false);
+  // method2
+  ele.addEventListener('click', function () {
+    var aLink = document.createElement('a');
+    var evt = document.createEvent('HTMLEvents');
+    var files = document.getElementById('myFile').files;
+    var blob = new Blob(files);
+
+    evt.initEvent('click');
+    aLink.download = '111.jpg'
+    aLink.href = URL.createObjectURL(blob);
+
+    aLink.dispatchEvent(evt);
+  }, false);
+
+  // method2
+  var ele2 = document.getElementById('J-iframe');
+  ele2.addEventListener('click', function () {
+    var ifr = document.createElement('iframe');
+    ifr.style.display = 'none';
+    ifr.src = './a.jpg.zip';
+
+    document.body.appendChild(ifr);
+
+    // ifr.contentWindow.document.execCommand('SaveAs', false, '1111.html');
+    // document.body.removeChild(ifr);
+  }, false);
+</script>

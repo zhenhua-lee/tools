@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>drag and drop</title>
+  <style>
+    #a {
+      width: 60px;
+      height: 60px;
+      border: 1px solid #ccc;
+      background-color: #ccc;
+      margin-bottom: 10px;
+    }
+    #b {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div id="a" draggable="true">
+    it is drag zone
+  </div>
+  <div id="b"></div>
+</body>
+</html>
+<script type="text/javascript">
+  var eleA = document.getElementById('a');
+  eleA.addEventListener('drag', function (e) {
+    // console.log('element is being draged: ', e.dataTransfer)
+  })
+  eleA.addEventListener('dragstart', function (e) {
+    e.dataTransfer.setData('test', 10000);
+    console.log('dragstart: ', e.dataTransfer)
+  })
+  eleA.addEventListener('dragend', function (e) {
+    console.log('dragend: ', e.dataTransfer)
+  })
+
+  var elemB = document.getElementById('b');
+  elemB.addEventListener('dragenter', function (e) {
+    console.log('dragenter: ', e.dataTransfer)
+    e.preventDefault();
+  })
+  elemB.addEventListener('dragleave', function (e) {
+    console.log('dragleave: ', e.dataTransfer)
+    e.preventDefault();
+  })
+  elemB.addEventListener('dragover', function (e) {
+    // console.log('dragover: ', e.dataTransfer)
+    e.preventDefault();
+  })
+  elemB.addEventListener('drop', function (e) {
+    console.log('drop data is: ', e.dataTransfer.getData('test'))
+    console.log('drop files is: ', e.dataTransfer.files)
+    e.preventDefault();
+  })
+</script>
+
+

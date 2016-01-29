@@ -1,21 +1,9 @@
-var gulp = require('gulp');
-var svgSprite = require('gulp-svg-sprites');
-var del = require('del');
+var a = 1;
+var b = 2;
+function add(a, b) {
+  if (a < 0) return 0;
+  return a + b;
+}
 
-gulp.task('sprites', function () {
-    return gulp.src('./svg/*.svg')
-        .pipe(svgSprite({
-            mode: 'symbols'
-        }))
-        .pipe(gulp.dest('./dist/svg'));
-});
-
-gulp.task('clean', function(cb) {
-    del(['./dist/svg'], function (err, path) {
-        console.log(path.join(', '));
-    })
-});
-
-gulp.task('default', function () {
-    gulp.start('sprites');
-});
+var c = add(a, b)
+console.log(c)

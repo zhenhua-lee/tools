@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File deal</title>
+</head>
+<body>
+  <p>get file information and url.createObjectURL</p>
+  <input type="file" id="file1" />
+  <hr />
+  <p>multiple files</p>
+  <input type="file" id="file2" multiple />
+
+  <p>files type</p>
+  <input type="file" id="file2" accept="image/*" />
+  <input type="file" id="file2" accept="application/pdf" />
+  <br />
+
+  <p>drop file</p>
+  <div id="drop" style="width: 1000px; height: 600px; border: 1px solid #ccc; background-color: green;"></div>
+
+
+</body>
+</html>
+<script type="text/javascript">
+  // https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications
+  // demo1
+  var file1 = document.getElementById('file1');
+  file1.addEventListener('change', function (e) {
+    // 图片内容发生改变时，执行该方法
+    console.log('demo1: ', e.target.files)
+    var file = e.target.files[0];
+    console.log('demo1 info: name is: ', file.name)
+    console.log('demo1 info: size is: ', file.size)
+    console.log('url.createObjectURL: ', window.URL.createObjectURL(file))
+  }, false);
+  // demo2
+  var file2 = document.getElementById('file2');
+  file2.addEventListener('change', function (e) {
+    // 图片内容发生改变时，执行该方法
+    console.log('demo2: ', e.target.files)
+  }, false);
+
+  // demo3
+  var drop = document.getElementById('drop')
+  drop.addEventListener('dragenter', function (e) {
+    console.log('dragenter');
+    e.preventDefault();
+  }, false);
+  drop.addEventListener('dragover', function (e) {
+    // console.log('drop files is: ', e.dataTransfer.files);
+    e.preventDefault();
+  }, false);
+  drop.addEventListener('drop', function (e) {
+    console.log('drop files is: ', e.dataTransfer.files);
+    var file = e.dataTransfer.files[0];
+
+    var img = document.createElement('img');
+    var reader = new FileReader();
+    reader.onload = (function(aImg) {
+      return function(e) {
+        aImg.src = e.target.result;
+        console.log('e.target.result: ', e.target.result)
+      }
+    })(img);
+    reader.readAsDataURL(file);
+  }, false);
+</script>
