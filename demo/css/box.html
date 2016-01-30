@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>盒模型的计算法方式</title>
+  <style>
+    .main {
+      box-sizing: border-box;
+      width: 400px;
+      height: 400px;
+      margin: 30px auto;
+      border: 1px solid #ccc;
+    }
+    .aa,
+    .bb {
+      width: 100px;
+      padding: 10px;
+      border: 2px;
+      background-color: green;
+    }
+    .aa {
+      box-sizing: inherit;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <p>盒模型的计算法方式: box-sizing</p>
+  <div class="main">
+    <div class="aa">
+      hello aa
+    </div>
+    <div class="bb">
+      hello bb
+    </div>
+  </div>
+</body>
+</html>
