@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>font-size计算</title>
+  <style>
+    .aa {
+      font-size: 150%;
+    }
+    .bb {
+      font-size: 150%;
+    }
+  </style>
+</head>
+<body>
+  <p>font-size计算方式</p>
+  <p class="aa">
+    <span>hello 1</span>
+    <span class="bb">hello 2</span>
+  </p>
+  <p style="font-size: 2em;">
+    <span style="font-size: 1em">font size is 1em</span>
+    <span style="font-size: 2em">font size is 2em</span>
+  </p>
+  <p style="font-size: 2rem;">
+    <span style="font-size: 1rem">font size is 1em</span>
+    <span style="font-size: 2rem">font size is 2em</span>
+  </p>
+  <div>
+    <div style="font-size: 20px; line-height: 2em">line height: 1</div>
+    <div style="font-size: 18px; line-height: 1.5">line height: 1.5</div>
+  </div>
+  <div style="line-height: 20px;">
+    <span>line-height可以被继承</span>
+  </div>
+</body>
+</html>
