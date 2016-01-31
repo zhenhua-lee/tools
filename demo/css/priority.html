@@ -1,16 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>css优先级问题</title>
-    <style>
-        html span { color: red; }
-        body span {color: yellow;}
-    </style>
+  <meta charset="UTF-8">
+  <title>css优先级问题</title>
+  <style>
+    body {
+      text-align: center;
+      cursor: pointer;
+    }
+    * {
+      font-size: 10px;
+    }
+    span {font-size: 11px;}
+    .aa {
+      font-size: 12px;
+    }
+    [type="button"] {
+      font-size: 13px;
+    }
+    .imp {
+      color: #000 !important;
+    }
+    p.outer {
+      color: green;
+    }
+    p:not(.cc) {
+      color: #000;
+    }
+
+    #iher {
+      margin-top: 60px;
+      border-top: 1px solid #ccc;
+      line-height: 20px;
+      background-color: #ccc;
+    }
+    #iher .pa2 {
+      line-height: 24px;
+    }
+    #pa {
+      background-color: inherit;
+      line-height: 30px;
+    }
+    .pos {
+      color: red;
+    }
+    .dd {
+      color: #111;
+    }
+    [href] {
+      color: #222;
+    }
+    a:link {
+      color: #333;
+    };
+    a:visited {
+      color: #444;
+    }
+    a:hover {
+      color: #555;
+    }
+    a:active {
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <div id="main">
-        <span class="cc">this is ok</span>
-    </div>
+  <div id="main">
+    <p>通配符 &lt; 元素选择器 &lt; 类选择器 &lt; 属性选择器 &lt;伪类 &lt; ID选择器 &lt; 内联选择器</p>
+    <hr />
+    <span>通配符 &lt;元素选择器 </span>
+    <hr />
+    <span class="aa">通配符 &lt;元素选择器</span>
+    <hr>
+    <input class="aa" type="button" value="类选择器 &lt; 属性选择器" />
+    <hr>
+    <span style="color: red;" class="imp">内联 &lt; !import</span>
+    <hr>
+    <p class="outer">类选择器 &lt; 伪类</p>
+    <hr />
+    <a href="" class="dd">类选择器 &lt; 伪类&lt; 属性选择器</a>
+  </div>
+  <div id="iher">
+    <div class="pa2" id="pa">从父类继承的css属性，优先级最低</div>
+  </div>
+  <div class="pos">权重相同，哪个距离近，则哪个生效</div>
 </body>
 </html>
+<style>
+  .pos {
+    color: green;
+  }
+</style>
+
+
