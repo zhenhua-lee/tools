@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>基本的flexbox学习</title>
+  <style>
+    .flex-con {
+      display: flex;
+      width: 400px;
+      height: 300px;
+      background-color: #ccc;
+    }
+    .flex-item {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      margin: 10px;
+    }
+    .flex-wrap {
+      flex-wrap: wrap;
+      align-content: center;
+    }
+    .flex-flow {
+      flex-flow: column nowrap;
+    }
+    .flex-order {
+      order: -1;
+    }
+    .flex-item-flex {
+      background-color: green;
+      margin: 10px;
+    }
+    .flex-item-flex1 {
+      flex: 1;
+    }
+    .flex-item-flex2 {
+      flex: 2;
+    }
+    .flex-item-flex2:hover {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-con">
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+  </div>
+  <hr>
+  <p>flex wrap 与 align-content</p>
+  <div class="flex-con flex-wrap">
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+  </div>
+  <hr>
+  <p>flex-flow: flex-direction、flex-wrap</p>
+  <div class="flex-con flex-flow">
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+  </div>
+
+  <hr>
+  <p>order</p>
+  <div class="flex-con">
+    <div class="flex-item">item1</div>
+    <div class="flex-item flex-order">item2</div>
+    <div class="flex-item">item3</div>
+  </div>
+
+  <hr>
+  <p>flex的伸缩性</p>
+  <div class="flex-con">
+    <div class="flex-item-flex flex-item-flex1">item1</div>
+    <div class="flex-item-flex flex-item-flex2">item2</div>
+    <div class="flex-item-flex flex-item-flex1">item3</div>
+  </div>
+</body>
+</html>

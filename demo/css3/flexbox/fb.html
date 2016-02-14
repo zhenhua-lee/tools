@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex layput</title>
+  <style>
+    .parent {
+      display: flex;
+      height: 300px;
+      border: 1px solid #ccc;
+    }
+    .child {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      border: 1px solid #ccc;
+      background-color: green;
+    }
+    .sec {
+      display: flex;
+      margin: 20px 0 0;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+    .sec-child {
+      background-color: green;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child">
+      学习flex布局
+    </div>
+  </div>
+  <div class="sec">
+    <dic class="sec-child">first 1</dic>
+    <dic class="sec-child">first 2</dic>
+    <dic class="sec-child">first 3</dic>
+    <dic class="sec-child">first 4</dic>
+    <dic class="sec-child">first 5</dic>
+    <dic class="sec-child">first 6</dic>
+  </div>
+</body>
+</html>

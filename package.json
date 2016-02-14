@@ -37,6 +37,7 @@
     "uglify-js": "^2.4.24"
   },
   "dependencies": {
+    "auto-mock": "^0.1.0",
     "browserify": "^11.0.0",
     "deepcopy": "^0.5.0",
     "del": "^1.2.0",
