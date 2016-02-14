@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex实现页面布局</title>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+    }
+    header, footer {
+      flex: 0 0 100px;
+      background-color: #ccc;
+      margin: 5px;
+    }
+    .flex-main {
+      display: flex;
+      flex-flow: row;
+      flex: 2 1 auto;
+    }
+    section {
+      display: flex;
+      flex-flow: row wrap;
+      flex: 4 1 auto;
+    }
+    .feature-article {
+      flex: 2 1 100%;
+      background-color: yellow;
+    }
+    article {
+      flex: 1 1 30%;
+      margin: 5px;
+      background-color: green;
+    }
+    aside {
+      display: flex;
+      flex: 0 0 240px;
+      flex-flow: column;
+    }
+    .aside-box {
+      flex: 1;
+      background-color: #000;
+      margin: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <header>
+      <p>页面的页眉</p>
+    </header>
+    <div class="flex-main">
+      <section>
+        <article class="feature-article">
+          首先我们需要将几个容器变成伸缩容器，我们的主容器是一个定义了类名为“flex-container”的div元素，因此我们使用前面介绍的方法，在这个元素中定义一个“display:flex”。这样一来，“div.flex-container”下的所有子元素(header、div.flex-area和footer)都变成了伸缩项目。然后我们想要伸缩项目从上到下的分几行排列，所以在这个伸缩容器中还定义了一个“flex-flow:column”。
+ 给页眉和页脚设置一个固定的高度。通过“flex”属性我们决定他们按下面的形式来表现：第一个“0”意味着我们不想让它扩展（flex-grow:1），第二个“0”意味着我们不想让它收缩（flex-shrink:0），最后一个值“100px”是收缩基准值（flex-basis）。
+ 接下来将“div.flex-area”元素设置为另一个收缩容器，所以我们也在这个元素上设置了“dislpaly:flex”。注意，这个非常好设置了“flex”属性后也变将对应的变成了伸缩容器，而其子元素也对应的变成了伸缩项目。在这个例子中，我们将其收缩基准值(flex-basis)设置为“auto”，因为我们希望它能在主内容区内扩展任何空间，在不收缩太多的情况下扩展足够大的空间，主要出发点他们是主要内容。
+        </article>
+        <article>
+          hello world, it is ok!
+        </article>
+        <article>
+          yes, come on baby!
+        </article>
+      </section>
+      <aside>
+        sides
+        <div class="aside-box"></div>
+        <div class="aside-box"></div>
+        <div class="aside-box"></div>
+      </aside>
+    </div>
+    <footer>
+      it is footer
+    </footer>
+  </div>
+</body>
+</html>
