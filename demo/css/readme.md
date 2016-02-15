@@ -6,3 +6,4 @@
 - box: 盒模型的计算方式
 - font-size: font-size的计算方式
 - cv.html: 元素水平垂直居中的方法
+- vertical-align: vertical-align研究

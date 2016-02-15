@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vertical-align研究</title>
+</head>
+<body>
+  <style>
+    .in-b { display: inline-block; }
+    .v-a {
+      vertical-align: middle;
+    }
+    .effect {
+      margin-top: 30px;
+      background-color: #ccc;
+    }
+    hr {margin-bottom: 30px;}
+  </style>
+  <p>只对inline、inline-block、table-cell元素生效</p>
+  <div class="v-a effect">
+    要学会坚持，耐得住寂寞
+  </div>
+  <div class="effect">
+    <input type="text" class="v-a" />
+    <span>要学会坚持，耐得住寂寞</span>
+  </div>
+
+  <style>
+    .f-l {
+      font-size: 32px;
+      line-height: 64px;
+    }
+  </style>
+  <hr>
+  <p>font-size、line-height的关系</p>
+  <div class="effect">
+    <span class="f-l">要学会坚持，耐得住寂寞</span>
+  </div>
+
+</body>
+</html>
