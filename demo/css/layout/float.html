@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <title>float layout</title>
+</head>
+<body>
+<style type="text/css">
+    .con:after {
+        display: block;
+        clear: both;
+        visibility: none;
+        height:0;
+        content: '';
+    }
+    .left-con {
+        float: left;
+        width: 100%;
+        background-color: green;
+    }
+    .left {
+        margin-right: 300px;
+    }
+    .right {
+        float: left;
+        width: 300px;
+        margin-left: -300px;
+        background-color: yellow;
+    }
+</style>
+<p>layout: float + margin</p>
+<div class="con">
+    <div class="left-con">
+        <div class="left">使用浮动的方式实现页面两栏布局，且做到左栏自适应.</div>
+    </div>
+    <div class="right">right</div>
+</div>
+
+<style>
+    .pro-main {
+        width: 600px;
+        background-color: #ccc;
+    }
+    .pro-main:after {
+        display: table;
+        content: "";
+        clear: both;
+    }
+    .pro-item1, .pro-item2, .pro-item3, .pro-item4 {
+        float: left;
+        width: 180px;
+        height: 100px;
+        margin-left: 2px;
+        margin-bottom: 10px;
+    }
+    .pro-item1 {
+        background-color: green;
+        height: 140px;
+    }
+    .pro-item2 {
+        background-color: #000;
+        height: 100px;
+    }
+    .pro-item3 {
+        background-color: yellow;
+        height: 100px;
+    }
+    .pro-item4 {
+        background-color: #000;
+        height: 100px;
+    }
+</style>
+<hr>
+<p>float的问题: 要求高度必须一致</p>
+<div class="pro-main">
+    <div class="pro-item1">item1</div>
+    <div class="pro-item2">item2</div>
+    <div class="pro-item3">item3</div>
+    <div class="pro-item4">item4</div>
+</div>
+</body>
+</html>

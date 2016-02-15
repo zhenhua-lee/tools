@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex layout</title>
+</head>
+<body>
+  <style>
+    .main {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      background-color: #ccc;
+      width: 400px;
+    }
+    .item {
+      background-color: #000;
+      margin: 2px;
+      height: 200px;
+    }
+    .first {
+      flex: 1 1 100%;
+    }
+    .second {
+      flex: 1 1 20%;
+    }
+    .third {
+      flex: 3 1 20%;
+    }
+  </style>
+  <p>通过flexbox实现页面布局</p>
+  <div class="main">
+    <div class="item first"></div>
+    <div class="item second"></div>
+    <div class="item third"></div>
+  </div>
+</body>
+</html>

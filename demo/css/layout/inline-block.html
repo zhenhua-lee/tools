@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>inline-block layout</title>
+</head>
+<body>
+  <style>
+    .main {
+      width: 420px;
+      background-color: #ccc;
+    }
+    .item {
+      display: inline-block;
+      width: 200px;
+      height: 100px;
+    }
+    .first {
+      background-color: #000;
+      height: 120px;
+    }
+    .second {
+      background-color: green;
+      height: 140px;
+      font-size: 16px;
+    }
+    .third {
+      background-color: yellow;
+    }
+  </style>
+  <p><span>layout: inline-block</span></p>
+  <div class="main">
+    <div class="item first">aaaaa</div>
+    <div class="item second">bbbbb</div>
+    <div class="item third">ccccc</div>
+  </div>
+</body>
+</html>

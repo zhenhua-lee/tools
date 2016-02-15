@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素水平垂直居中的方法</title>
+</head>
+<body>
+  <style>
+    .flex-con {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 400px;
+      height: 400px;
+      background-color: #ccc;
+    }
+  </style>
+  <p>方法1: 使用flexbox直接使用</p>
+  <div class="flex-con">
+    要实现水平垂直居中，要实现水平垂直居中，要实现水平垂直居中，要实现水平垂直居中，要实现水平垂直居中。
+  </div>
+  <hr>
+
+  <style>
+    .flex-con2 {
+      display: flex;
+
+      width: 400px;
+      height: 400px;
+      background-color: #ccc;
+    }
+    .main {
+      margin: auto;
+    }
+  </style>
+  <p>方法2: 使用flexbox + margin </p>
+  <div class="flex-con2">
+    <div class="main">要实现水平垂直居中，要实现水平垂直居中，要实现水平垂直居中，要实现水平垂直居中，要实现水平垂直居中。</div>
+  </div>
+</body>
+</html>
