@@ -38,5 +38,98 @@
   <div class="flex-con2">
     <div class="main">要实现水平垂直居中，要实现水平垂直居中，要实现水平垂直居中，要实现水平垂直居中，要实现水平垂直居中。</div>
   </div>
+
+  <style>
+    .t-c {
+      display: table;
+      width: 400px;
+      height: 400px;
+      background-color: #ccc;
+    }
+    .t-m {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+  </style>
+  <hr>
+  <p>方法3: table-cell实现, 好处是无需元素的宽高</p>
+  <div class="t-c">
+    <div class="t-m">
+      要实现水平垂直居中。
+    </div>
+  </div>
+
+  <style>
+    .abs {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background-color: #ccc;
+    }
+    .abs-con {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -100px -100px;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+    }
+  </style>
+  <hr>
+  <p>方法4: absolute, 需要知道元素的宽高</p>
+  <div class="abs">
+    <div class="abs-con">
+      要实现水平垂直居中。
+    </div>
+  </div>
+
+  <style>
+    .a-t {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background-color: #ccc;
+    }
+    .a-t-con {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <hr>
+  <p>方法5: absolute + transform</p>
+  <div class="a-t">
+    <div class="a-t-con">
+      要实现水平垂直居中。
+    </div>
+  </div>
+
+  <style>
+    .i-b {
+      width: 400px;
+      height: 400px;
+      background-color: #ccc;
+    }
+    .i-b-con,
+    .i-b-ext {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .i-b-ext {
+      height: 100%;
+    }
+  </style>
+  <hr>
+  <p>方法6: inline-block</p>
+  <div class="i-b">
+    <div class="i-b-con">
+      要实现水平垂直居中。
+    </div>
+    <div class="i-b-ext"></div>
+  </div>
 </body>
 </html>
