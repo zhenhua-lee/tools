@@ -44,11 +44,11 @@
         }
     }
     #second.ani {
-        -webkit-animation: pullRight 1s linear;
+        -webkit-animation: pullRight .5s linear;
         transform: translate(0, 0);
     }
     #second.left {
-        -webkit-animation: pullleft 1s linear;
+        -webkit-animation: pullleft .5s linear;
         transform: translate(100%, 0);
     }
     input {
@@ -59,7 +59,12 @@
 </head>
 <body>
     <div id="first">
-        <p>transform translate</p>
+        <div style="position: absolute; top: 0; overflow: auto">
+            <p>transform translate</p>
+            <p>transform translate</p>
+            <p>transform translate</p>
+            <p>transform translate</p>
+        </div>
         <input type="button" value="move" id="move" />
     </div>
     <div id="second">

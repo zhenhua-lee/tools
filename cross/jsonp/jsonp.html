@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf8">
+    <title>jsonp实现跨域</title>
+</style>
+</head>
+<body >
+    <p>jsonp实现跨域</p>
+</body>
+<script>
+    function getAge(obj) {
+        console.log(obj.age);
+    }
+    window.ccbb = getAge;
+    var script = document.createElement('script');
+    script.src = 'http://localhost:3000/test?cb=ccbb';
+    script.onerror = function(e) {
+        console.log('it is error: ', e);
+    }
+    document.body.appendChild(script);
+</script>
+</html>
