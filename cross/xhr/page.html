@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xhr 实现跨域</title>
+</head>
+<body>
+    <p>Access-Control-Allow-Origin 来实现跨域</p>
+</body>
+</html>
+<script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200 || xhr.status === 304) {
+                console.log(JSON.parse(xhr.responseText));
+            }
+        }
+    }
+    xhr.open('get', 'http://localhost:3000', true);
+    xhr.send(null);
+</script>
