@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过window.name实现跨域</title>
+</head>
+<body>
+    <p id='first'>在一个window下，name是可以共享的</p>
+    <ul id='list'>
+        <li>11111</li>
+        <li>33333</li>
+    </ul>
+</body>
+</html>
+<script>
+    function createIframe() {
+        var iframe = document.createElement('iframe');
+        iframe.style = 'display: none';
+        iframe.src = 'http://localhost:3001/external.html';
+        document.body.appendChild(iframe);
+        iframe.onload = () => {
+            iframe.onload = () => {
+                var data = iframe.contentWindow.name;
+                console.log('get Data: ', data);
+                iframe.parentElement.removeChild(iframe);
+            }
+            iframe.src = './black.html';
+        }
+    }
+    createIframe();
+
+    function insertAfter() {
+        var ul = document.querySelector('#list');
+        var li = document.createElement('li');
+        li.innerHTML = '222244433';
+        var first = ul.firstElementChild;
+        var next = first.nextElementSibling;
+        ul.insertBefore(li, next);
+    }
+    insertAfter();
+</script>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document domain</title>
+</head>
+<body>
+    <p>通过document domain来解决主域、子域之间的通信问题</p>
+    <p>通过将两个页面的domain设置成相同的域，这样就变不同于为相同域</p>
+    <hr />
+    <iframe id="inner" src="http://localhost:3001/inner.html" frameborder="0"></iframe>
+</body>
+</html>
+<script type="text/javascript">
+    var iframe = document.querySelector('#inner');
+    console.log(iframe.contentWindow);
+</script>
