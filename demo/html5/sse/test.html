@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf8">
+    <meta http-equiv="Cache-Control" content="max-age=7200" />
+    <link rel="shortcut icon" href="./favicon.ico">
+    <title>audio</title>
+</head>
+<body >
+    <input type="button" value="submit" id="my" />
+</body>
+<script>
+    var sse = new EventSource('/sse');
+    sse.onmessage = (e) => {
+        console.log(e)
+    }
+    sse.addEventListener('myevent', (e) => {
+        console.log('custom event: ', e);
+    });
+    sse.onopen = () => {
+        console.log('sse is open');
+    }
+    sse.onerror = () => {
+        console.log('error is happened');
+    }
+</script>
+</html>
