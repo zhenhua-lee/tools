@@ -11,7 +11,7 @@ function Child(age) {
   this.age = age;
 }
 Child.prototype = new Parent();
-Child.prototype.constructor = 'Child';
+Child.prototype.constructor = Child;
 
 var cc = new Child(6);
 cc.showAge();

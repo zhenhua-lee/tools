@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>等高布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap1 {
+      float: left;
+      position: relative;
+      width: 100%;
+      background-color: orange;
+    }
+    .wrap2 {
+      float: left;
+      position: relative;
+      left: 200px;
+      width: 100%;
+      background-color: green;
+    }
+    .left {
+      float: left;
+      margin-left: -200px;
+      margin-right: -100%;
+      width: 200px;
+    }
+    .right {
+      float: left;
+      width: 100%;
+      margin-left: -200px;
+    }
+    .right-content {
+      margin-left: 200px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>把两列的背景色全部放到父容器上面</li>
+    <li>然后通过移动位置，不同位置展示不同的颜色</li>
+  </ul>
+  <div class="wrap1">
+    <div class="wrap2">
+      <div class="left">
+        <p>left</p>
+        <p>left</p>
+        <p>left</p>
+      </div>
+      <div class="right">
+        <div class="right-content">
+          <p>right</p>
+          <p>right</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

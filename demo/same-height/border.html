@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>等高布局</title>
+  <style>
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background-color: yellow;
+      width: 100%;
+    }
+    .wrap {
+      border-left: 200px solid green;
+    }
+
+    .wrap:after {
+      content: ' ';
+      clear: both;
+      display: block;
+      height: 0;
+      visibility: hidden;
+    }
+
+    .left {
+      float: left;
+      width: 200px;
+      margin-left: -200px;
+      background-color: green;
+    }
+    .right {
+      float: left;
+      /*width: 100%;*/
+    }
+    .left, .right {
+      min-height: 30px;
+      height: auto !important;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>通过border-left实现</li>
+    <li>背景颜色，不是放到同一级的元素上，一个放到父元素上面</li>
+    <li>如果左边大于右边，则会将父容器高度撑高，这样右边的背景色跟父容器一样</li>
+    <li>如果左边小于由边，因为border-left的缘故，也会把左边给撑开</li>
+  </ul>
+  <div class="container">
+    <div class="wrap">
+      <div class="left">
+        <p>left</p>
+        <p>left</p>
+        <p>left</p>
+      </div>
+      <div class="right">
+        <p>right</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>等高布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      overflow: hidden;
+    }
+    .left {
+      float: left;
+      width: 200px;
+      background-color: green;
+    }
+    .right {
+      margin-left: 200px;
+      background: #ccc;
+    }
+    .left, .right {
+      padding-bottom: 9999px;
+      margin-bottom: -9999px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>通过padding-bottom让两个容易变得很高</li>
+    <li>然后在父容器上，截断内容: overflow: hidden</li>
+  </ul>
+  <div class="wrap">
+    <div class="left">
+      <p>left</p>
+      <p>left</p>
+      <p>left</p>
+    </div>
+    <div class="right">
+      <p>right</p>
+    </div>
+  </div>
+</body>
+</html>
