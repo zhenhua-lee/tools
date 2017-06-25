@@ -54,6 +54,7 @@
 		const blob = new Blob(data, {type : 'application/octet-binary'});
 		const urlObj = URL.createObjectURL(blob);
 		document.getElementById('J-csv').href = urlObj;
+		window.URL.revokeObjectURL(urlObj);
 	}
 	const data = [
 		{ address: '北京', num: 1213232 },
