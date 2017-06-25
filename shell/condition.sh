@@ -1,12 +1,12 @@
 #!/bin/bash
-# n=-1
-# if [ n < 0 ]; then
-# 	echo "n 小于 0"
-# elif [ n -lt 10 ]; then
-# 	echo "n 小于 10"
-# else
-# 	echo "n 大于 10"
-# fi
+read n
+if [[ n < 0 ]]; then
+	echo "n 小于 0"
+elif [[ n -lt 10 ]]; then
+	echo "n 小于 10"
+else
+	echo "n 大于 10"
+fi
 
 # echo "your number is"
 # read number
@@ -21,9 +21,9 @@
 # 	echo "output is ${loop}"
 # done
 
-num=0
-while [ $num -lt 5 ]
-do
-	num=`expr $num + 1`
-	echo "输出为：$num"
-done
+# num=0
+# while [ $num -lt 5 ]
+# do
+# 	num=`expr $num + 1`
+# 	echo "输出为：$num"
+# done

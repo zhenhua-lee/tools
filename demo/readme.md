@@ -11,3 +11,4 @@
 - file: 文件处理
   - drag: 拖拽行为处理
 - same-height: 实现元素的等高布局
+- file-cvs.js: 字符串和cvs文件之间的相互转换
