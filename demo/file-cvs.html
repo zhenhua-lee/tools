@@ -34,7 +34,7 @@
 </body>
 </html>
 <script>
-	function file2String(file, encode, callback) {
+	function cvs2String(file, encode, callback) {
 		const reader = new FileReader();
 		reader.readAsText(file, encode);
 		reader.onload = e => {
@@ -44,18 +44,19 @@
 	document.addEventListener('change', e => {
 		const file = e.target.files[0];
 		const containerEle = document.getElementById('my-txt');
-		file2String(file, 'utf8', (result) => {
+		cvs2String(file, 'utf8', (result) => {
 			document.getElementById('my-txt').value = result;
 			console.log(result);
 		});
 	}, false);
 
-	function string2File(data) {
-		const blob = new Blob(data, {type : 'application/octet-binary'});
+
+	function string2cvs(data, config, callback) {
+		const blob = new Blob(data, config);
 		const urlObj = URL.createObjectURL(blob);
-		document.getElementById('J-csv').href = urlObj;
-		// window.URL.revokeObjectURL(urlObj);
+		callback(urlObj);
 	}
+
 	const data = [
 		{ address: '北京', num: 1213232 },
 		{ address: '上海', num: 12013232 },
@@ -66,7 +67,9 @@
 		return `${item.address}, ${item.num} \n`;
 	});
 	dd.unshift('城市, 数字 \n');
-	string2File(dd);
+	string2cvs(dd, { type : 'application/octet-binary' }, result => {
+		document.getElementById('J-csv').href = result;
+	});
 </script>
 
 
