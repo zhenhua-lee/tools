@@ -36,7 +36,7 @@
 <script>
 	function cvs2String(file, encode, callback) {
 		const reader = new FileReader();
-		reader.readAsText(file, encode);
+		reader.readAsDataURL(file, encode);
 		reader.onload = e => {
 			callback(e.target.result);
 		}
